@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi: Sejarah & Perkembangan Hukum Perdata Internasional</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Outfit, Cinzel, & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- External Libraries for Export/Download -->
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Ambient Lighting & Particles -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-pattern-overlay"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav no-print">
+    <div class="nav-left">
+      <div class="brand-badge">
+        <img src="logo-uinssc.png" alt="Logo UINSSC" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">HUKUM PERDATA INTERNASIONAL</span>
+          <span class="brand-sub">UIN Siber Syekh Nurjati Cirebon &bull; Moh. Raihan & Sufyan Tsaury</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <span class="slide-indicator">
+        <span id="current-slide-num">01</span>
+        <span class="divider">/</span>
+        <span id="total-slides-num">10</span>
+      </span>
+      <span class="slide-title-header" id="current-slide-title">Cover & Informasi Makalah</span>
+    </div>
+
+    <div class="nav-right">
+      <button class="nav-btn" id="btn-autoplay" title="Otomatis Putar (P)" aria-label="Auto play">
+        <i class="fa-solid fa-play"></i>
+        <span class="btn-text">Autoplay</span>
+      </button>
+
+      <button class="nav-btn" id="btn-sound" title="Efek Suara (S)" aria-label="Sound Toggle">
+        <i class="fa-solid fa-volume-high"></i>
+      </button>
+
+      <button class="nav-btn" id="btn-grid" title="Ringkasan Semua Slide (O)" aria-label="Grid View">
+        <i class="fa-solid fa-table-cells"></i>
+        <span class="btn-text">Overview</span>
+      </button>
+
+      <button class="nav-btn btn-download-accent" id="btn-download-modal" title="Unduh Slide (D)" aria-label="Download Slide">
+        <i class="fa-solid fa-cloud-arrow-down"></i>
+        <span class="btn-text">Download Slide</span>
+      </button>
+
+      <button class="nav-btn" id="btn-fullscreen" title="Layar Penuh (F)" aria-label="Fullscreen">
+        <i class="fa-solid fa-expand"></i>
+      </button>
+
+      <button class="nav-btn" id="btn-help" title="Petunjuk Tombol Shortcut (?)" aria-label="Help">
+        <i class="fa-solid fa-circle-question"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Presentation Viewport (16:9 ratio container) -->
+  <main class="presentation-viewport" id="presentation-viewport">
+    <div class="slides-wrapper" id="slides-wrapper">
+
+      <!-- ==============================================
+           SLIDE 1: COVER & IDENTITAS MAKALAH
+           ============================================== -->
+      <section class="slide active-slide" data-slide="1" data-title="Cover & Informasi Makalah">
+        <div class="slide-inner cover-slide-layout">
+          <div class="cover-border-frame">
+            <div class="cover-header-tag anim-item" style="--delay: 1">
+              <span class="meta-pill"><i class="fa-solid fa-scale-balanced"></i> TUGAS MATA KULIAH HUKUM PERDATA INTERNASIONAL</span>
+              <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i> TAHUN AKADEMIK 2026</span>
+            </div>
+
+            <div class="cover-logo-center anim-item" style="--delay: 1.5">
+              <img src="logo-uinssc.png" alt="Logo UIN Siber Syekh Nurjati Cirebon" class="cover-uin-logo">
+            </div>
+
+            <div class="cover-main-title anim-item" style="--delay: 2">
+              <h1 class="main-title">SEJARAH & PERKEMBANGAN<br><span class="gold-gradient-text">HUKUM PERDATA INTERNASIONAL</span></h1>
+              <p class="sub-title">Evolusi Pemikiran dari Teori Statuta Italia & Prancis, Mazhab Belanda & Anglo-Amerika, hingga Transformasi Regulasi Mandiri di Indonesia</p>
+            </div>
+
+            <div class="cover-meta-grid anim-item" style="--delay: 2.8">
+              <div class="meta-card lecturer-card">
+                <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <div class="card-content">
+                  <span class="card-label">DOSEN PENGAMPU</span>
+                  <strong class="card-val">Moch Fahmi Firmasyah, S.Sy. M.A.</strong>
+                  <span class="card-sub">Dosen Pengampu Hukum Perdata Internasional</span>
+                </div>
+              </div>
+
+              <div class="meta-card team-card">
+                <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                <div class="card-content">
+                  <span class="card-label">DISUSUN OLEH</span>
+                  <strong class="card-val">Moh. Raihan <span style="font-size:0.8rem; font-weight:normal;">[2530311065]</span> &bull; Sufyan Tsaury <span style="font-size:0.8rem; font-weight:normal;">[2530311086]</span></strong>
+                  <span class="card-sub">Prodi Hukum Keluarga &bull; Fakultas Syari'ah &bull; UIN Siber Syekh Nurjati Cirebon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 2: LATAR BELAKANG & URGENSI
+           ============================================== -->
+      <section class="slide" data-slide="2" data-title="Latar Belakang & Urgensi Globalisasi">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-compass"></i> BAB I PENDAHULUAN</span>
+              <h2 class="slide-main-title">Latar Belakang & Urgensi Globalisasi</h2>
+              <p class="slide-subtitle">Batas geografis antarnegara kini memudar, memicu lonjakan interaksi sosial dan ekonomi lintas batas.</p>
+            </div>
+            <div class="slide-badge-number">02</div>
+          </div>
+
+          <div class="five-card-grid">
+            <div class="flow-card anim-item" style="--delay: 1">
+              <span class="flow-card-badge">FAKTOR 01</span>
+              <div class="flow-icon"><i class="fa-solid fa-users-rays"></i></div>
+              <h3 class="flow-title">Perpindahan Penduduk</h3>
+              <p class="flow-desc">Mobilitas manusia lintas yurisdiksi untuk bekerja, menempuh studi, dan migrasi domisili permanen di negara lain.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 1.5">
+              <span class="flow-card-badge">FAKTOR 02</span>
+              <div class="flow-icon"><i class="fa-solid fa-ring"></i></div>
+              <h3 class="flow-title">Perkawinan Campuran</h3>
+              <p class="flow-desc">Pernikahan WNI dengan WNA menimbulkan persoalan syarat sah perkawinan, pemisahan harta bersama, hingga hak asuh anak.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 2">
+              <span class="flow-card-badge">FAKTOR 03</span>
+              <div class="flow-icon"><i class="fa-solid fa-ship"></i></div>
+              <h3 class="flow-title">Bisnis Transnasional</h3>
+              <p class="flow-desc">Transaksi dagang ekspor-impor dan pasar digital (e-commerce) yang menghubungkan entitas lintas sistem hukum berbeda.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 2.5">
+              <span class="flow-card-badge">FAKTOR 04</span>
+              <div class="flow-icon"><i class="fa-solid fa-building-columns"></i></div>
+              <h3 class="flow-title">Kepemilikan Aset LN</h3>
+              <p class="flow-desc">Sengketa properti, saham, atau warisan yang terletak di yurisdiksi negara lain menuntut kepastian yurisdiksi berwenang.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 3">
+              <span class="flow-card-badge">FAKTOR 05</span>
+              <div class="flow-icon"><i class="fa-solid fa-scale-unbalanced"></i></div>
+              <h3 class="flow-title">Hubungan Berunsur Asing</h3>
+              <p class="flow-desc">Adanya <em>foreign element</em> melahirkan dua pertanyaan kunci: pengadilan mana yang berwenang dan hukum mana yang harus diterapkan?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 3: PENGERTIAN SINGKAT HPI
+           ============================================== -->
+      <section class="slide" data-slide="3" data-title="Pengertian HPI & Unsur Asing">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-book-bookmark"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Pengertian Singkat HPI & Unsur Asing</h2>
+              <p class="slide-subtitle">Hakikat Hukum Perdata Internasional sebagai sistem aturan penunjuk nasional.</p>
+            </div>
+            <div class="slide-badge-number">03</div>
+          </div>
+
+          <div class="split-3-layout">
+            <div class="concept-box anim-item" style="--delay: 1">
+              <div class="concept-quote">
+                "HPI bukan kodifikasi hukum perdata dunia yang seragam, melainkan cabang hukum nasional yang memuat seperangkat aturan penunjuk (referral rules) layaknya 'rambu lalu lintas hukum' untuk menemukan lex causae."
+              </div>
+              <span style="font-size:0.82rem; font-weight:700; color:var(--gold-primary); text-transform:uppercase; letter-spacing:0.06em;">
+                5 Titik Taut / Faktor Pengait Unsur Asing (Foreign Element):
+              </span>
+              <div class="factors-list">
+                <div class="factor-item"><i class="fa-solid fa-passport"></i> <span><strong>Perbedaan Kewarganegaraan:</strong> Misalnya WNI menikah dengan WNA Jepang (lex patriae).</span></div>
+                <div class="factor-item"><i class="fa-solid fa-house-chimney-user"></i> <span><strong>Perbedaan Domisili:</strong> Penggugat bertempat tinggal tetap di Singapura namun menggugat di Indonesia.</span></div>
+                <div class="factor-item"><i class="fa-solid fa-location-dot"></i> <span><strong>Tempat Peristiwa Hukum:</strong> Terjadinya perbuatan melawan hukum atau kontrak di luar negeri (locus delicti).</span></div>
+                <div class="factor-item"><i class="fa-solid fa-building"></i> <span><strong>Kedudukan Badan Hukum:</strong> Kontrak antara korporasi Indonesia dengan perusahaan berbadan hukum AS.</span></div>
+                <div class="factor-item"><i class="fa-solid fa-landmark"></i> <span><strong>Letak Objek Benda:</strong> Sengketa kepemilikan aset properti di wilayah yurisdiksi asing (lex rei sitae).</span></div>
+              </div>
+            </div>
+
+            <div class="cases-box anim-item" style="--delay: 1.8">
+              <div class="cases-box-title">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>3 Ilustrasi Kasus Nyata</span>
+              </div>
+
+              <div class="case-card">
+                <span class="case-card-title"><i class="fa-solid fa-ring gold-text"></i> Perkawinan Campuran di Australia</span>
+                <p class="case-card-desc">Jika WNI menikah dengan WNA Inggris di Australia, hukum negara mana yang menentukan syarat sah pernikahan dan pembagian harta bersama?</p>
+              </div>
+
+              <div class="case-card">
+                <span class="case-card-title"><i class="fa-solid fa-truck-ramp-box gold-text"></i> Kontrak Pengadaan Mesin Jerman</span>
+                <p class="case-card-desc">Perusahaan Indonesia membeli mesin dari pabrikan Jerman namun barang tiba dalam kondisi rusak. Hukum mana yang mengatur tuntutan ganti rugi?</p>
+              </div>
+
+              <div class="case-card">
+                <span class="case-card-title"><i class="fa-solid fa-house-laptop gold-text"></i> Pembagian Waris Lintas Yurisdiksi</span>
+                <p class="case-card-desc">Pewaris meninggal dunia dan meninggalkan real estate di berbagai negara. Apakah menggunakan hukum asal pewaris atau hukum letak benda?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 4: AWAL PERKEMBANGAN HPI
+           ============================================== -->
+      <section class="slide" data-slide="4" data-title="Awal Perkembangan HPI (Evolusi Logis)">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-timeline"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Awal Perkembangan Pemikiran HPI</h2>
+              <p class="slide-subtitle">Rantai sebab-akibat sosiologis dari isolasi masyarakat kuno hingga lahirnya teori statuta.</p>
+            </div>
+            <div class="slide-badge-number">04</div>
+          </div>
+
+          <div class="five-card-grid">
+            <div class="flow-card anim-item" style="--delay: 1">
+              <span class="flow-card-badge">TAHAP 01</span>
+              <div class="flow-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <h3 class="flow-title">Perbedaan Hukum Antarwilayah</h3>
+              <p class="flow-desc">Pada mulanya, komunitas kuno hidup terisolasi dengan tradisi hukum masing-masing tanpa konflik antarsistem.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 1.5">
+              <span class="flow-card-badge">TAHAP 02</span>
+              <div class="flow-icon"><i class="fa-solid fa-sailboat"></i></div>
+              <h3 class="flow-title">Peningkatan Mobilitas & Dagang</h3>
+              <p class="flow-desc">Jalur maritim dan perdagangan antarkota di Eropa terbuka, mendorong pergerakan fisik manusia melintasi batas kota.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 2">
+              <span class="flow-card-badge">TAHAP 03</span>
+              <div class="flow-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+              <h3 class="flow-title">Lahir Hubungan Berunsur Asing</h3>
+              <p class="flow-desc">Pedagang dari satu kota mulai bertransaksi, membuat kontrak perjanjian, atau menikah dengan warga kota tetangga.</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 2.5">
+              <span class="flow-card-badge">TAHAP 04</span>
+              <div class="flow-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+              <h3 class="flow-title">Benturan Antar-Sistem Hukum</h3>
+              <p class="flow-desc">Muncul dilema nyata bagi hakim: apakah pedagang harus tunduk pada hukum kota asalnya atau hukum kota tempat transaksi?</p>
+            </div>
+
+            <div class="flow-card anim-item" style="--delay: 3">
+              <span class="flow-card-badge">TAHAP 05</span>
+              <div class="flow-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h3 class="flow-title">Lahirnya Teori & Doktrin HPI</h3>
+              <p class="flow-desc">Kebutuhan keadilan dan kepastian hukum mendorong para yuris merumuskan Teori Statuta hingga mazhab HPI modern.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 5: MASA STATUTA ITALIA
+           ============================================== -->
+      <section class="slide" data-slide="5" data-title="Masa Statuta Italia (Abad 13–15)">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-monument"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Masa Statuta Italia (Abad 13–15)</h2>
+              <p class="slide-subtitle">Tonggak awal Accursius (Glossa Ordinaria) dan Trikotomi Statuta Bartolus de Saxoferrato (Bapak HPI).</p>
+            </div>
+            <div class="slide-badge-number">05</div>
+          </div>
+
+          <div class="three-statuta-grid">
+            <div class="statuta-card anim-item" style="--delay: 1">
+              <span class="statuta-badge">KATEGORI I</span>
+              <h3 class="statuta-title">Statuta Personalia</h3>
+              <span class="statuta-nature"><i class="fa-solid fa-arrows-spin"></i> Sifat: Ekstrateritorial</span>
+              
+              <div class="statuta-rule-box">
+                <strong>Fokus Pengaturan:</strong>
+                <p>Status personal, kapasitas hukum seseorang, kedewasaan, perkawinan, dan hubungan hukum keluarga.</p>
+              </div>
+
+              <div class="statuta-rule-box">
+                <strong>Prinsip Keberlakuan:</strong>
+                <p>Statuta ini melekat erat pada diri seseorang dan terus mengikat ke mana pun ia bepergian melintasi batas yurisdiksi kota.</p>
+              </div>
+
+              <span class="statuta-latin">Asas: Lex Personalia / Lex Patriae</span>
+            </div>
+
+            <div class="statuta-card anim-item" style="--delay: 1.6">
+              <span class="statuta-badge">KATEGORI II</span>
+              <h3 class="statuta-title">Statuta Realia</h3>
+              <span class="statuta-nature"><i class="fa-solid fa-lock"></i> Sifat: Teritorial Murni</span>
+              
+              <div class="statuta-rule-box">
+                <strong>Fokus Pengaturan:</strong>
+                <p>Status kebendaan dan hak-hak kebendaan, khususnya benda tidak bergerak seperti tanah dan bangunan.</p>
+              </div>
+
+              <div class="statuta-rule-box">
+                <strong>Prinsip Keberlakuan:</strong>
+                <p>Hukum yang berlaku mutlak adalah hukum di tempat benda terletak, mengikat siapa saja tanpa memandang kewarganegaraannya.</p>
+              </div>
+
+              <span class="statuta-latin">Asas: Lex Rei Sitae / Lex Situs</span>
+            </div>
+
+            <div class="statuta-card anim-item" style="--delay: 2.2">
+              <span class="statuta-badge">KATEGORI III</span>
+              <h3 class="statuta-title">Statuta Mixta</h3>
+              <span class="statuta-nature"><i class="fa-solid fa-pen-nib"></i> Sifat: Teritorial Terbatas</span>
+              
+              <div class="statuta-rule-box">
+                <strong>Fokus Pengaturan:</strong>
+                <p>Bentuk formalitas akta/perjanjian, syarat pembuatan kontrak, serta pertanggungjawaban perbuatan melawan hukum.</p>
+              </div>
+
+              <div class="statuta-rule-box">
+                <strong>Prinsip Keberlakuan:</strong>
+                <p>Hukum yang berlaku mengacu mutlak pada tempat di mana perbuatan hukum tersebut dilaksanakan.</p>
+              </div>
+
+              <span class="statuta-latin">Asas: Locus Regit Actum / Lex Loci Actus</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 6: MASA STATUTA PRANCIS
+           ============================================== -->
+      <section class="slide" data-slide="6" data-title="Masa Statuta Prancis (Abad ke-16)">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-feather-pointed"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Masa Statuta Prancis (Abad ke-16)</h2>
+              <p class="slide-subtitle">Dialektika di tengah keberagaman hukum kebiasaan lokal (<em>coutume</em>) antarprovinsi feodal Prancis.</p>
+            </div>
+            <div class="slide-badge-number">06</div>
+          </div>
+
+          <div class="vs-two-columns">
+            <div class="vs-badge-circle">VS</div>
+
+            <div class="jurist-card jurist-card-dumoulin anim-item" style="--delay: 1">
+              <h3 class="jurist-name">Charles Dumoulin</h3>
+              <span class="jurist-role-tag">1500–1566 &bull; Pendukung Otonomi Para Pihak</span>
+
+              <div class="jurist-core-concept">
+                <strong style="color:var(--gold-light); display:block; margin-bottom:0.4rem;">Gagasan Pokok:</strong>
+                Menolak pembagian kaku ala Bartolus yang membatasi geliat bisnis antarprovinsi. Dumoulin mencetuskan doktrin revolusioner: <strong>Kebebasan Memilih Hukum (Party Autonomy)</strong>. Para pihak dalam suatu kontrak berhak secara bebas dan tersirat menyepakati sistem hukum yang mengatur perjanjian mereka.
+              </div>
+
+              <div class="jurist-impact">
+                <i class="fa-solid fa-star gold-text"></i>
+                <span><strong>Kontribusi Modern:</strong> Menjadi fondasi utama hukum kontrak komersial internasional dan kebebasan berkontrak modern.</span>
+              </div>
+            </div>
+
+            <div class="jurist-card jurist-card-dargentre anim-item" style="--delay: 1.6">
+              <h3 class="jurist-name">Bertrand d'Argentré</h3>
+              <span class="jurist-role-tag">1519–1590 &bull; Penjaga Otonomi Teritorial Feodal</span>
+
+              <div class="jurist-core-concept">
+                <strong style="color:var(--blue-light); display:block; margin-bottom:0.4rem;">Gagasan Pokok:</strong>
+                Menolak pandangan Dumoulin yang dinilai terlalu bebas. Sebagai hakim bangsawan di Brittany, ia berusaha membendung campur tangan penguasa Paris dengan prinsip kedaulatan tanah: <strong>Semua statuta pada prinsipnya bersifat realia (teritorial)</strong>, dan pengecualian hanya diberikan secara sangat sempit bagi personalia.
+              </div>
+
+              <div class="jurist-impact">
+                <i class="fa-solid fa-shield-halved gold-text"></i>
+                <span><strong>Kontribusi Modern:</strong> Mempertegas batas-batas kedaulatan wilayah teritorial negara atas properti dan hukum tanah.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 7: BELANDA & ANGLO-AMERIKA
+           ============================================== -->
+      <section class="slide" data-slide="7" data-title="Aliran Belanda & Anglo-Amerika">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-gavel"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Aliran Belanda & Anglo-Amerika</h2>
+              <p class="slide-subtitle">Dari doktrin kesopanan antarbangsa hingga pembagian yurisdiksi tradisi Common Law.</p>
+            </div>
+            <div class="slide-badge-number">07</div>
+          </div>
+
+          <div class="school-comparison-grid">
+            <div class="school-card anim-item" style="--delay: 1">
+              <div class="school-header">
+                <div class="school-icon-wrapper"><i class="fa-solid fa-anchor"></i></div>
+                <div>
+                  <h3 class="school-title">Aliran Belanda (Abad ke-17)</h3>
+                  <span class="school-sub">Tokoh Kunci: Ulrik Huber, Johannes Voet, Paulus Voet</span>
+                </div>
+              </div>
+
+              <div class="key-points-list">
+                <div class="key-point-row">
+                  <i class="fa-solid fa-check-double"></i>
+                  <div>
+                    <strong style="color:#ffffff;">Kedaulatan Teritorial Mutlak:</strong>
+                    Pasca kemerdekaan dari Spanyol (Westphalia 1648), ditegaskan hukum negara hanya mengikat secara berdaulat di dalam batas wilayahnya sendiri.
+                  </div>
+                </div>
+
+                <div class="key-point-row">
+                  <i class="fa-solid fa-handshake"></i>
+                  <div>
+                    <strong style="color:#ffffff;">Doktrin Comitas Gentium (Comity):</strong>
+                    Pengadilan sukarela mengakui hukum asing atau hak yang diperoleh di luar negeri (<em>vested rights</em>) bukan karena paksaan hukum internasional, melainkan atas dasar kesopanan, kepatutan, dan demi kepentingan bersama.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="school-card anim-item" style="--delay: 1.6" style="border-color:var(--border-blue);">
+              <div class="school-header">
+                <div class="school-icon-wrapper" style="color:var(--blue-light);"><i class="fa-solid fa-landmark"></i></div>
+                <div>
+                  <h3 class="school-title">Aliran Anglo-Amerika (Abad ke-19)</h3>
+                  <span class="school-sub">Tokoh Kunci: Joseph Story (1834), A.V. Dicey, Joseph Beale</span>
+                </div>
+              </div>
+
+              <div class="key-points-list">
+                <div class="key-point-row">
+                  <i class="fa-solid fa-scale-balanced" style="color:var(--blue-light);"></i>
+                  <div>
+                    <strong style="color:#ffffff;">Pendekatan Praktis Peradilan (Case Law):</strong>
+                    Lahir dari sistem negara bagian (federalism) AS. Mengadopsi <em>comitas gentium</em> Belanda dan diselaraskan dengan Common Law.
+                  </div>
+                </div>
+
+                <div class="key-point-row">
+                  <i class="fa-solid fa-arrows-split-up-and-left" style="color:var(--blue-light);"></i>
+                  <div>
+                    <strong style="color:#ffffff;">Pemisahan Dua Pilar Utama:</strong>
+                    1. <em>Choice of Jurisdiction</em>: Menguji apakah pengadilan berwenang mengadili perkara.<br>
+                    2. <em>Choice of Law</em>: Menentukan hukum materiil yang paling memiliki keterikatan terdekat (<em>most significant relationship</em>).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 8: TABEL PERBANDINGAN MAZHAB
+           ============================================== -->
+      <section class="slide" data-slide="8" data-title="Matriks Komparasi Mazhab HPI">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-table-list"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Matriks Komparasi Mazhab Sejarah HPI</h2>
+              <p class="slide-subtitle">Ringkasan sistematis perbandingan tokoh, pokok pemikiran, dan kontribusi bagi HPI modern.</p>
+            </div>
+            <div class="slide-badge-number">08</div>
+          </div>
+
+          <div class="matrix-table-wrapper anim-item" style="--delay: 1">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th style="width: 18%;">Aliran / Masa</th>
+                  <th style="width: 22%;">Tokoh Utama</th>
+                  <th style="width: 32%;">Pokok Pemikiran & Ciri Khas</th>
+                  <th style="width: 28%;">Kontribusi bagi HPI Modern</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Statuta Italia</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">Abad ke-13–15</span></td>
+                  <td>Accursius, Bartolus de Saxoferrato, Baldus de Ubaldis</td>
+                  <td>Membedakan statuta menjadi personalia, realia, dan mixta. Memberi perlindungan individu dari pemaksaan hukum kota lain.</td>
+                  <td><span class="matrix-badge-legacy"><i class="fa-solid fa-check"></i> Peletak doktrin lex personalia & lex rei sitae</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Statuta Prancis</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">Abad ke-16</span></td>
+                  <td>Charles Dumoulin, Bertrand d’Argentré</td>
+                  <td>Perdebatan sengit otonomi kehendak para pihak (Dumoulin) vs dominasi kedaulatan tanah feodal (d'Argentré).</td>
+                  <td><span class="matrix-badge-legacy"><i class="fa-solid fa-check"></i> Doktrin Party Autonomy dalam kontrak internasional</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Aliran Belanda</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">Abad ke-17</span></td>
+                  <td>Ulrik Huber, Johannes Voet, Paulus Voet</td>
+                  <td>Kedaulatan teritorial negara bersifat mutlak. Pengakuan hukum asing berlandaskan kesopanan antarbangsa (comitas gentium).</td>
+                  <td><span class="matrix-badge-legacy"><i class="fa-solid fa-check"></i> Rasio logis berlakunya hukum asing secara sukarela</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Anglo-Amerika</strong><br><span style="font-size:0.75rem; color:var(--text-muted);">Abad ke-19–Modern</span></td>
+                  <td>Joseph Story, A.V. Dicey, Joseph Beale</td>
+                  <td>Pendekatan pragmatis berbasis putusan hakim (case law). Pemisahan tegas yurisdiksi forum dan hukum yang berlaku.</td>
+                  <td><span class="matrix-badge-legacy"><i class="fa-solid fa-check"></i> Metode sengketa komersial & arbitrase modern</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 9: PERKEMBANGAN HPI DI INDONESIA
+           ============================================== -->
+      <section class="slide" data-slide="9" data-title="Perkembangan HPI di Indonesia">
+        <div class="slide-inner">
+          <div class="slide-header anim-item" style="--delay: 0.5">
+            <div class="slide-header-left">
+              <span class="header-category-tag"><i class="fa-solid fa-flag"></i> BAB II PEMBAHASAN</span>
+              <h2 class="slide-main-title">Perkembangan HPI di Indonesia</h2>
+              <p class="slide-subtitle">Dari akar sejarah Hukum Antargolongan hingga urgensi pembentukan RUU HPI Nasional.</p>
+            </div>
+            <div class="slide-badge-number">09</div>
+          </div>
+
+          <div class="indonesia-tri-grid">
+            <div class="indo-card anim-item" style="--delay: 1">
+              <div class="indo-card-icon"><i class="fa-solid fa-scroll"></i></div>
+              <h3 class="indo-card-title">Warisan Kolonial AB 1847</h3>
+              <p class="indo-card-sub">Berakar dari Pasal 163 & 131 IS (Intergentiel Recht):</p>
+              <ul class="indo-card-list">
+                <li><i class="fa-solid fa-diamond"></i> <div><strong>Pasal 16 AB:</strong> Asas personalitas (<em>lex patriae</em>), status & wewenang WNI tetap melekat di mana pun berada.</div></li>
+                <li><i class="fa-solid fa-diamond"></i> <div><strong>Pasal 17 AB:</strong> Asas letak benda (<em>lex rei sitae</em>), benda tidak bergerak tunduk pada hukum tempatnya berada.</div></li>
+                <li><i class="fa-solid fa-diamond"></i> <div><strong>Pasal 18 AB:</strong> Formalitas perbuatan hukum (<em>locus regit actum</em>) dinilai menurut tempat pembuatan.</div></li>
+              </ul>
+            </div>
+
+            <div class="indo-card anim-item" style="--delay: 1.6">
+              <div class="indo-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <h3 class="indo-card-title">Regulasi Sektoral Tersebar</h3>
+              <p class="indo-card-sub">Belum memiliki kodifikasi mandiri, norma tercecer dalam:</p>
+              <ul class="indo-card-list">
+                <li><i class="fa-solid fa-diamond"></i> <div><strong>UU Perkawinan (UU 1/1974 jo UU 16/2019):</strong> Mengatur ketentuan perkawinan campuran (Pasal 57–62).</div></li>
+                <li><i class="fa-solid fa-diamond"></i> <div><strong>UU Adminduk (UU 24/2013):</strong> Pencatatan sipil atas peristiwa penting WNI di luar negeri.</div></li>
+                <li><i class="fa-solid fa-diamond"></i> <div><strong>UU Arbitrase (UU 30/1999):</strong> Pengakuan dan pelaksanaan putusan arbitrase komersial internasional (Konvensi New York 1958).</div></li>
+              </ul>
+            </div>
+
+            <div class="indo-card indo-card-urgent anim-item" style="--delay: 2.2">
+              <div class="indo-card-icon" style="color:var(--gold-light);"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3 class="indo-card-title">Urgensi RUU HPI Nasional</h3>
+              <p class="indo-card-sub">Inisiatif BPHN & Kemenkumham (2023):</p>
+              <ul class="indo-card-list">
+                <li><i class="fa-solid fa-circle-check" style="color:var(--gold-primary);"></i> <div>Menghadirkan kepastian perlindungan hukum bagi WNI dan korporasi nasional saat bertransaksi dengan pihak asing.</div></li>
+                <li><i class="fa-solid fa-circle-check" style="color:var(--gold-primary);"></i> <div>Mengatur kejelasan klausul pilihan hukum (<em>choice of law</em>) dan forum peradilan (<em>choice of court</em>) di era digital.</div></li>
+                <li><i class="fa-solid fa-circle-check" style="color:var(--gold-primary);"></i> <div>Menegaskan batasan doktrin ketertiban umum (<em>public policy</em>) secara proporsional.</div></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           SLIDE 10: KESIMPULAN & PENUTUP
+           ============================================== -->
+      <section class="slide" data-slide="10" data-title="Kesimpulan & Sesi Diskusi">
+        <div class="slide-inner">
+          <div class="conclusion-layout">
+            <span class="meta-pill anim-item" style="--delay: 0.5; margin-bottom: 1.2rem;">
+              <i class="fa-solid fa-award"></i> BAB III PENUTUP &bull; KESIMPULAN AKHIR
+            </span>
+
+            <h2 class="conclusion-statement anim-item" style="--delay: 1">
+              "HPI berevolusi dari kebutuhan praktis kota-kota dagang Italia menjadi instrumen hukum global yang menjembatani keadilan lintas negara."
+            </h2>
+
+            <div class="conclusion-cards-row anim-item" style="--delay: 1.6">
+              <div class="concl-card">
+                <div class="concl-card-icon"><i class="fa-solid fa-globe"></i></div>
+                <div class="concl-card-body">
+                  <h3>Evolusi Doktrin Internasional</h3>
+                  <p>Dari konsep statuta hingga aliran modern, masing-masing mazhab telah menyumbangkan prinsip fundamental: perlindungan status personal, kepastian letak benda, kebebasan berkontrak, dan penghormatan kedaulatan.</p>
+                </div>
+              </div>
+
+              <div class="concl-card">
+                <div class="concl-card-icon"><i class="fa-solid fa-landmark-dome"></i></div>
+                <div class="concl-card-body">
+                  <h3>Kebutuhan Strategis Indonesia</h3>
+                  <p>Meninggalkan ketergantungan aturan kolonial AB 1847 menuju pengesahan RUU HPI Nasional adalah langkah krusial untuk melindungi kepentingan nasional dan meningkatkan daya saing di tengah ekonomi digital global.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="qa-invitation anim-item" id="btn-qa-celebrate" style="--delay: 2.2">
+              <i class="fa-solid fa-comments"></i>
+              <span>Terima Kasih &bull; Buka Sesi Tanya Jawab (Q&A)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation & Controls Bar -->
+  <footer class="bottom-bar no-print">
+    <button class="nav-arrow-btn" id="btn-prev" aria-label="Previous slide">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Sebelumnya</span>
+    </button>
+
+    <div class="bottom-center-wrapper">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="slide-dots-container" id="slide-dots-container">
+        <!-- Generated by JavaScript -->
+      </div>
+
+      <div class="keyboard-hint">
+        <span>Gunakan tombol</span>
+        <span class="kbd-badge">&larr;</span>
+        <span class="kbd-badge">&rarr;</span>
+        <span>atau</span>
+        <span class="kbd-badge">Spasi</span>
+        <span>untuk navigasi</span>
+      </div>
+    </div>
+
+    <button class="nav-arrow-btn" id="btn-next" aria-label="Next slide">
+      <span>Selanjutnya</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </footer>
+
+  <!-- ==============================================
+       MODALS: DOWNLOAD, OVERVIEW, HELP
+       ============================================== -->
+
+  <!-- Download Options Modal -->
+  <div class="modal-overlay" id="download-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+          <h3 class="modal-title">Unduh Slide Presentasi</h3>
+        </div>
+        <button class="modal-close-btn" data-close-modal="download-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.4rem;">
+          Pilih format dokumen presentasi yang Anda butuhkan untuk keperluan tugas kuliah dan presentasi di kelas:
+        </p>
+        <div class="download-grid">
+          <!-- PPTX Option -->
+          <div class="download-option-card" id="btn-run-pptx-dl">
+            <div class="dl-opt-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+            <h4 class="dl-opt-title">Microsoft PowerPoint (.pptx)</h4>
+            <p class="dl-opt-desc">Ekspor seluruh slide ke format asli PowerPoint 16:9 yang dapat diedit langsung.</p>
+            <span class="dl-opt-btn"><i class="fa-solid fa-download"></i> Unduh PPTX</span>
+          </div>
+
+          <!-- PDF Option -->
+          <div class="download-option-card" id="btn-run-pdf-dl">
+            <div class="dl-opt-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h4 class="dl-opt-title">Dokumen Cetak / PDF</h4>
+            <p class="dl-opt-desc">Cetak atau simpan slide ke dokumen PDF beresolusi tinggi dengan tata letak landscape.</p>
+            <span class="dl-opt-btn"><i class="fa-solid fa-print"></i> Cetak / Simpan PDF</span>
+          </div>
+
+          <!-- PNG Option -->
+          <div class="download-option-card" id="btn-run-png-dl">
+            <div class="dl-opt-icon"><i class="fa-solid fa-file-image"></i></div>
+            <h4 class="dl-opt-title">Gambar Slide Aktif (.png)</h4>
+            <p class="dl-opt-desc">Tangkapan layar slide yang sedang aktif dengan kualitas tinggi.</p>
+            <span class="dl-opt-btn"><i class="fa-solid fa-camera"></i> Tangkap PNG</span>
+          </div>
+
+          <!-- Offline HTML Option -->
+          <div class="download-option-card" id="btn-run-html-dl">
+            <div class="dl-opt-icon"><i class="fa-solid fa-file-code"></i></div>
+            <h4 class="dl-opt-title">Berkas Web Offline (.html)</h4>
+            <p class="dl-opt-desc">Simpan presentasi mandiri untuk diputar di laptop tanpa koneksi internet.</p>
+            <span class="dl-opt-btn"><i class="fa-solid fa-code"></i> Simpan HTML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overview Grid Modal -->
+  <div class="modal-overlay" id="overview-modal">
+    <div class="modal-card overview-modal-card">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-table-cells"></i>
+          <h3 class="modal-title">Ringkasan Semua Slide (Overview Grid)</h3>
+        </div>
+        <button class="modal-close-btn" data-close-modal="overview-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="overview-thumbnails-grid" id="overview-thumbnails-grid">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help Shortcuts Modal -->
+  <div class="modal-overlay" id="help-modal">
+    <div class="modal-card" style="max-width: 520px;">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-keyboard"></i>
+          <h3 class="modal-title">Pintasan Keyboard (Shortcuts)</h3>
+        </div>
+        <button class="modal-close-btn" data-close-modal="help-modal"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <table class="help-shortcuts-table">
+          <tbody>
+            <tr>
+              <td><span class="kbd-badge">&rarr;</span> atau <span class="kbd-badge">Spasi</span></td>
+              <td>Pindah ke slide berikutnya</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">&larr;</span> atau <span class="kbd-badge">Backspace</span></td>
+              <td>Kembali ke slide sebelumnya</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">F</span></td>
+              <td>Toggle mode layar penuh (Fullscreen)</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">O</span> atau <span class="kbd-badge">G</span></td>
+              <td>Buka / tutup Ringkasan Slide (Grid)</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">D</span></td>
+              <td>Buka menu unduh dokumen slide</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">P</span></td>
+              <td>Mulai / hentikan pemutaran otomatis (Autoplay)</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">S</span></td>
+              <td>Aktifkan / nonaktifkan efek suara</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">?</span></td>
+              <td>Tampilkan bantuan ini</td>
+            </tr>
+            <tr>
+              <td><span class="kbd-badge">Esc</span></td>
+              <td>Tutup semua jendela dialog (modal)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
