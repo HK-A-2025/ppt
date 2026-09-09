@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeSlideEl = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
     if (activeSlideEl) {
       currentSlideTitleEl.textContent = activeSlideEl.getAttribute('data-title') || 'Presentasi';
+      const inner = activeSlideEl.querySelector('.slide-inner');
+      if (inner) inner.scrollTop = 0;
     }
 
     // Update Dots
@@ -694,6 +696,39 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
     }
   });
+
+  // Mobile Touch Swipe Gesture Support
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleTouchSwipe();
+  }, { passive: true });
+
+  function handleTouchSwipe() {
+    // If modal is active, do not navigate slides
+    if (document.querySelector('.modal-overlay.active')) return;
+
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    // Check if horizontal swipe is intentional and distinct from vertical scrolling
+    if (Math.abs(diffX) > 48 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+      if (diffX < 0) {
+        nextSlide(); // Swipe left -> Next slide
+      } else {
+        prevSlide(); // Swipe right -> Previous slide
+      }
+    }
+  }
 
   // Initialize
   totalSlidesNumEl.textContent = `${totalSlides < 10 ? '0' + totalSlides : totalSlides}`;
